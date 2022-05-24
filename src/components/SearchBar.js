@@ -7,7 +7,7 @@ class SearchBar extends React.Component{
   onFormSubmit = (event) => {
     event.preventDefault();
 
-    console.log();
+    this.props.onSubmit(this.state.term); 
   }
 
 
@@ -19,7 +19,7 @@ class SearchBar extends React.Component{
                     <label>Photo Search</label>
                     <input
                       type="text"
-                      value={this.state.term}
+                      value={this.state.termS}
                       onChange={ e => this.setState({ term: e.target.value})}
                     />
                 </div>
